@@ -1,0 +1,147 @@
+/* src/assets/app.css */
+body {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  margin: 0;
+  background: #f4f6f8;
+  color: #1f2937;
+}
+
+.layout-topbar {
+  background: linear-gradient(90deg,#2196f3 0%,#4f46e5 100%);
+  color: #fff;
+  padding: 0.75rem 1rem;
+}
+
+.layout-main {
+  display: flex;
+  gap: 0;
+}
+
+/* sidebar */
+.app-sidebar {
+  width: 280px;
+  /*background: rgb(15, 23, 42) !important;*/
+  background: rgb(38, 45, 65) !important;
+  border-right: 1px solid #9e9e9e;
+  min-height: calc(100vh - 56px);
+  padding: 0px 10px 0 10px;
+}
+
+/* main content */
+.content {
+  flex: 1;
+  padding: 1.25rem;
+}
+
+.erp-module {
+  width: 12rem;
+  height: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--surface-card);
+  border: 1px solid var(--surface-border);
+  border-radius: 10px;
+
+  box-shadow: var(--shadow-1);
+}
+
+.erp-icon {
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.erp-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.brand-b {
+  color: var(--primary-color);
+}
+
+.brand-m {
+  color: var(--text-color);
+  margin-left: 0.25rem;
+}
+
+.brand-slogan {
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  color: var(--text-color-secondary);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* TreeTable mobile scroll */
+.treetable-wrapper {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .treetable-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .treetable-wrapper table {
+    min-width: 900px; /* колонка санына қарай */
+  }
+}
+
+.layout-wrapper {
+  display: flex;
+  height: 100vh; /* full viewport height */
+}
+
+.layout-main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden; /* child overflow controlled separately */
+}
+
+.layout-content {
+  flex: 1;
+  overflow-y: auto;       /* vertical scroll */
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+}
+
+.layout-sidebar {
+  width: 260px;
+  background: var(--surface-900);
+  overflow-y: auto;       /* sidebar scroll */
+}
+
+/* TreeTable horizontal scroll wrapper */
+.treetable-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+  .treetable-wrapper table {
+    min-width: 900px; /* adjust for columns */
+  }
+}
+
+.custom-secondary {
+    background-color: #f1f5f9;
+    color: #475569;
+}
